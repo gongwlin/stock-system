@@ -1,0 +1,21 @@
+.content{
+  background: #eee;
+  color: blue;  
+  font: 20px bold;
+  padding: 20px 0;
+  border-bottom: 1px solid #aaa;
+}
+.content h3{
+  margin: 10px;
+}
+.content li{
+  margin-top: 5px;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+
+ul li{
+    list-style-type: none;
+}

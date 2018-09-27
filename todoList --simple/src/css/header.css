@@ -1,0 +1,23 @@
+.header {
+    font: 20px/1.6 微软雅黑;
+    width: 300px;
+    margin-top: 20px;
+
+}
+
+.top {
+    margin-top: 20px;
+}
+
+.container {
+    margin: 0 300px;
+}
+.tip{
+    color: #ccc;
+    font: 20px/1.6 微软雅黑;
+}
+
+.linethrouht{
+    text-decoration-line: line-through;
+    color: #fcc;
+ }

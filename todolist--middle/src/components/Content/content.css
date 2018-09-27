@@ -1,0 +1,22 @@
+.content{
+    font: 20px/2 宋体;
+    background: #eee;
+    color: blue;
+}
+.top {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.footer{
+    font: 20px/2 宋体;
+    background: #eee;
+    color: blue;
+}
+
+li{
+    margin: 5px 0;
+}
+
+.linethrough{
+    text-decoration: line-through;
+}
