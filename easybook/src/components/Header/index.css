@@ -1,0 +1,98 @@
+.header{
+    position: relative;
+    height: 56px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.header >img{
+    float: left;
+}
+.homepage{
+    float: left;
+    color: #ea6f5a;
+    font-size: 17px;
+    padding: 0 15px;
+    line-height: 56px;
+    margin-left: 130px;
+}
+
+.downloadapp{
+    float: left;
+    font-size: 17px;
+    line-height: 56px;
+    margin-left: 0px;
+    padding: 0 15px;
+}
+.downloadapp:hover{
+    background: #eee;
+    cursor: pointer;
+}
+
+.login,.write,.register,.Aa{
+    float: right;
+    line-height: 56px;
+    font-size: 17px;
+}
+.login:hover,.write:hover,.register:hover,.Aa:hover{
+    cursor: pointer;
+}
+.login{
+    color: #969696;
+    margin-right: 15px;
+
+}
+.write{
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    background-color: #ea6f5a;
+    color: #fff;
+    width: 105px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 8px 15px 0;
+}
+.register{
+    border: 1px solid #ea6f5a;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #ea6f5a;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 8px;
+
+}
+.Aa{
+    color: #969696;
+    margin-right: 15px;
+}
+
+.search{
+    border: 1px solid #eee;
+    border-radius: 20px;
+    background-color: #eee;
+    font-size: 14px;
+    width: 240px;
+    height: 38px;
+    line-height: 38px;
+    margin: 8px 15px 0;
+    padding: 0 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.mask{
+    position: absolute;
+    height: 150px;
+    width: 240px;
+    left: 450px;
+    top: 60px;
+    background: rebeccapurple;
+ 
+}
+
+.noshow{
+    display: none
+}
+
