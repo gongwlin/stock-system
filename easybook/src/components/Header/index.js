@@ -20,7 +20,7 @@ export default  class Header extends Component {
     render() {
         return (
             <div className="header">
-                <img className="logo" alt="logo" width="100" height="56" src={require('./../../assets/navlogo.png')}/>
+                <img className="logo" alt="logo" width="100" height="56" src={require('./../../assets/img/navlogo.png')}/>
                 <div className="homepage"><i className="iconfont">&#xe6c5; </i>首页</div>
                 <div className="downloadapp"><i className="iconfont">&#xe60a; </i>下载App</div>
                 <input className="search" 
@@ -35,4 +35,5 @@ export default  class Header extends Component {
             </div>
         )
     }
+
 }

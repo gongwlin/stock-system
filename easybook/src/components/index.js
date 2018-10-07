@@ -1,4 +1,6 @@
-import Header from './Header'
-
-
-export default Header
+import Header from './Header/'
+import Content from './Content'
+export {
+    Header,
+    Content
+}

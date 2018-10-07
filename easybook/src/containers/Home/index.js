@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Header from '../../components'
+import { Header,Content} from '../../components'
 
 
 export default class Home extends Component {
@@ -8,6 +8,7 @@ export default class Home extends Component {
         return (
             <Fragment>
                 <Header/>
+                <Content />
                 {/* <div className="">this is Home</div> */}
             </Fragment>
         )

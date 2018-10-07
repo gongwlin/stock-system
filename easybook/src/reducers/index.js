@@ -1,6 +1,16 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware,combineReducers } from 'redux'
 import thunk from 'redux-thunk'
+import Header from './header/reducer'
 
-const reduxMiddleWare = applyMiddleware(thunk)(createStore)
+const initialState = {
+    show: false
+}
 
-export const store = createStore(rootReducer,initialState,)
+
+const rootReducer = combineReducers({
+   Header
+})
+
+const store = createStore(rootReducer,initialState)
+
+export default store; 
