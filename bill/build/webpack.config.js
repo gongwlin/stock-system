@@ -8,10 +8,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:3000/',
+        'webpack/hot/dev-server',
         path.resolve(__dirname,'../src/index.js')
     ],
     output: {
         path: path.resolve(__dirname, '../dist'),
+        publicPath: path.resolve(__dirname, '../dist'),
         filename: 'bundle.js',
         chunkFilename: 'chunk.bundle.js',
     },
@@ -58,6 +60,15 @@ module.exports = {
             },
         ]
     },
+    devServer: {
+        contentBase: path.join(__dirname, '../dist'),
+        publicPath: path.resolve(__dirname, '../dist'),
+        open: true,
+        hot: true,
+        port: 3000,
+        stats: { colors: true },
+        inline: true
+    },
     plugins: [
         new HtmlWebpackPlugin({  
             title: 'bill',
@@ -69,7 +80,7 @@ module.exports = {
             hash: true, //为了更好的 cache，可以在文件名后加个 hash。
         }),
         new CleanWebpackPlugin(['dist']),//实例化，参数为目录
-        // new webpack.NamedModulesPlugin(),
-        // new webpack.HotModuleReplacementPlugin()
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }

@@ -6,7 +6,7 @@ export default class App extends Component {
     render() {
         return (
             <Fragment>
-                <Head data={[1,2,4,5]}/>
+                <Head data={[1,2]}/>
             </Fragment>
         );
     }
