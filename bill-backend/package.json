@@ -1,0 +1,21 @@
+{
+  "name": "bill-backend",
+  "version": "1.0.0",
+  "description": "This project support for bill web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deug": "set DEBUG=express:* & nodemon ./index.js",
+    "start": "nodemon ./index.js"
+  },
+  "author": "gongwlin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parse": "^0.4.0",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.13",
+    "pug": "^2.0.3"
+  }
+}
