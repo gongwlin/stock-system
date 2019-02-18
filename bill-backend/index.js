@@ -1,21 +1,18 @@
 const express = require('express');
 const app = express();
-const user = require('./db/user');
+const cookieParse = require('cookie-parse');
+const bodyParse = require('body-parser');
+const router = express.Router();
 
+app.use(cookieParse);
+app.use(bodyParse({extended: true}))
 
-app.get('',function (req,res) {
-    console.log('aa');
-    res.send('<h1>hello,world</h1>');
+app.get('/login',function(req, res) {
+    
 });
 
-app.listen(3000,function() {
-    console.log('express listening')
-})
 
+app.listen(3000, function () {
+    console.log('listening');
+});
 
-
-
-// const Cat = mongoose.model('Cat', { name: String });
-
-// const kitty = new Cat({ name: 'Zildjian' });
-// kitty.save().then(() => console.log('meow'));
