@@ -12,9 +12,11 @@
 
 const User = require('../model/user');
 
+const generateID = () => {
+}
+
 const login = async (ctx) => {
     ctx.set('Access-Control-Allow-Origin', '*');
-
     const { username, password } = ctx.request.body;
     // console.log('{ username, password }', username, password);
     const result = await User.find({ username, password} );
@@ -26,6 +28,12 @@ const login = async (ctx) => {
         };
         return ;
     }
+    // user表的id唯一, cookie/session失效
+
+    // 获取cookie， 设置session
+
+    // ctx.set('set-cookie','');
+
     ctx.body = {
         code: 0,
         msg: '登录成功',

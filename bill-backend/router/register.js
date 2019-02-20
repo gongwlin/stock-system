@@ -42,6 +42,8 @@ const register = async (ctx) => {
         logindate: new Date().toUTCString()
     });
 
+    // 注册时，md5(Math.random() * 1000)生成id
+    // 返回
     newUser.save( (err) => {
         if ( err ) {
            throw new Error('保存失败');

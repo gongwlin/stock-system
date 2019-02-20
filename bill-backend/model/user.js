@@ -9,3 +9,21 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model('User', UserSchema);
 
 module.exports = User
+
+
+/**
+ *  Schema:
+ *
+ *  session: {
+ *      id:
+ *  }
+ *
+ *  user: {username, password, loginDate, id}
+ *
+ *  data: {
+ *      {
+ *          id: 1,
+ *          {type}, {}, {}
+ *      }
+ *  }
+ */
