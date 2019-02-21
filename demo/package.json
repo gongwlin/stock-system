@@ -1,31 +1,120 @@
 {
-  "name": "pure",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-redux": "^6.0.0",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.3",
-    "redux": "^4.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "@types/react": "^16.8.2"
-  }
+    "name": "panda",
+    "version": "1.0.0",
+    "description": "this is a personal UI library",
+    "main": "index.js",
+    "scripts": {
+        "commit": "git-cz",
+        "commitmsg": "commitlint -e $GIT_PARAMS",
+        "lint": "tslint -p . -c ./tslint.json",
+        "start": "gulp -f ./build/gulpfile.js dev",
+        "build": "webpack --config ./config/webpack.config.prod.js",
+        "build:lib": "gulp -f ./build/gulpfile.js lib:build",
+        "prepublish": "npm run build:lib"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "gongwlin",
+    "license": "ISC",
+    "bugs": {
+        "url": ""
+    },
+    "homepage": "",
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-transform-runtime": "^7.2.0",
+        "@babel/preset-env": "^7.2.3",
+        "@commitlint/cli": "^7.2.1",
+        "@commitlint/config-conventional": "^7.1.2",
+        "@types/classnames": "^2.2.6",
+        "@types/node": "^10.12.18",
+        "@types/react": "^16.7.18",
+        "@types/react-addons-css-transition-group": "^15.0.5",
+        "@types/react-dom": "^16.0.11",
+        "@types/react-router-dom": "^4.3.1",
+        "@types/react-swipeable-views": "^0.12.2",
+        "autoprefixer": "^9.4.3",
+        "awesome-typescript-loader": "^5.2.1",
+        "babel-loader": "^8.0.4",
+        "babel-plugin-module-extension": "^0.1.1",
+        "commitizen": "^3.0.5",
+        "css-loader": "^2.0.1",
+        "cz-conventional-changelog": "^2.1.0",
+        "file-loader": "^3.0.1",
+        "gulp": "^4.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-cached": "^1.1.1",
+        "gulp-less": "^4.0.1",
+        "gulp-postcss": "^8.0.0",
+        "gulp-typescript": "^5.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "husky": "^1.2.1",
+        "less": "^3.9.0",
+        "less-loader": "^4.1.0",
+        "lint-staged": "^8.1.0",
+        "merge2": "^1.2.3",
+        "mini-css-extract-plugin": "^0.5.0",
+        "opn": "^5.4.0",
+        "postcss-flexbugs-fixes": "^4.1.0",
+        "postcss-loader": "^3.0.0",
+        "postcss-px2rem": "^0.3.0",
+        "style-loader": "^0.23.1",
+        "tslint": "^5.12.0",
+        "tslint-loader": "^3.5.4",
+        "tslint-react": "^3.6.0",
+        "typescript": "^3.2.2",
+        "url-loader": "^1.1.2",
+        "webpack": "^4.8.3",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.13",
+        "webpack-merge": "^4.1.5"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.2.0",
+        "classnames": "^2.2.6",
+        "normalize.css": "^8.0.1",
+        "react": "^16.7.0",
+        "react-addons-css-transition-group": "^15.6.2",
+        "react-dom": "^16.7.0",
+        "react-router-dom": "^4.3.1",
+        "react-swipeable-views": "^0.13.0"
+    },
+    "babel": {
+        "plugins": [
+            "@babel/plugin-transform-runtime"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ],
+        "rules": {
+            "subject-case": [
+                0,
+                "never"
+            ]
+        }
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": "npm run lint"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "directories": {
+        "lib": "lib"
+    },
+    "keywords": [
+        "react",
+        "typescript"
+    ]
 }
