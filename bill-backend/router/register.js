@@ -1,32 +1,12 @@
-// const express = require('express');
-// const router = express.Router();
-
-// router.post('',function(req,res) {
-//     console.log('req.body',req.body);
-//     const { usm, pwd } = req.body;
-//     console.log('router',usm,pwd);
-//     res.setHeader('Access-Control-Allow-Origin','*');
-//     res.send('aaaaa');
-// });
-
-
-
-
-// const register = ctx => {
-//     console.log('login');
-//     ctx.set('Access-Control-Allow-Origin', '*');
-//     ctx.body = 'register'
-// }
-
 const User = require('../model/user');
+const md5 = require('md5');
+
 
 const register = async (ctx) => {
-    ctx.set('Access-Control-Allow-Origin', '*');
+    ctx.set('Access-Control-Allow-Origin', 'locahost:3000');
+    // ctx.set('Access-Control-Allow-Credentials',true);
     const { username, password } = ctx.request.body;
-    // console.log('username, password', username, password);
-
     const findResult = await User.findOne({'username':username})
-   
     if ( findResult ) {
         ctx.body = {
             msg: '用户名重复',
@@ -36,20 +16,20 @@ const register = async (ctx) => {
         return;
     }
 
+    const id = md5(Math.random() * 1000);
+    console.log('id',id);
     const newUser = new User({
         username,
         password,
-        logindate: new Date().toUTCString()
+        logindate: new Date().toUTCString(),
+        id
     });
 
-    // 注册时，md5(Math.random() * 1000)生成id
-    // 返回
     newUser.save( (err) => {
         if ( err ) {
            throw new Error('保存失败');
         }
     })
-    
     ctx.body = {
         msg: '注册成功',
         code: 0,
