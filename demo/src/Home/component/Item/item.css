@@ -1,0 +1,25 @@
+.rowItem-item-data {
+    height: 50px;
+    display: flex;
+    padding: 0 20px;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #F6F6F6;
+}
+
+.rowItem-item-data .icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f9d47f;
+    border-radius: 50%;
+}
+
+.rowItem-item-data .type {
+    flex: 6;
+}
+
+.rowItem-item-data .money {
+    flex: 2;
+}

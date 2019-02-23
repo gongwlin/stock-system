@@ -1,0 +1,7 @@
+
+.content-container {
+    flex: 1;
+    overflow: auto;
+    flex-direction: column;
+    display: flex;
+}
