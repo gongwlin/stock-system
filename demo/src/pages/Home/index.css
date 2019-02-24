@@ -1,5 +1,5 @@
 
-html, body,#root,.detail {
+html, body, #root, .detail, .edit {
     height: 100%;
 }
 .home-container {

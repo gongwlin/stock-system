@@ -1,0 +1,53 @@
+.edit {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rebeccapurple; */
+}
+
+.edit-title {
+    display: flex;
+    height: 30px;
+    line-height: 25px;
+    padding: 10px 10px;
+    border-bottom: 1px solid #F1F1F1;
+}
+.edit-center{
+    padding: 2px 0;
+}
+.edit-save, .edit-close, .edit-center {
+    flex: 1;
+}
+.edit-save {
+    text-align: right;
+    /* padding-right:  */
+}
+
+
+.calculate {
+    height: 25vh;
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cell-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.cell {
+    border-right: 1px solid #4B525C;
+    border-bottom: 1px solid #4B525C;
+    background-color: #3B424C;
+    flex: 1;
+    line-height: calc(25vh/4);
+}
+
