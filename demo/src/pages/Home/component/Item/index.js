@@ -9,14 +9,15 @@ export default class Item extends Component {
         const {
             icon,
             type,
-            money
+            money,
+            isDetail
         } = this.props
         
         return (
             <div className="rowItem-item-data" onClick={() => console.log('icon')}>
                 <div className="icon"><Icon type={icon}/></div>
                 <div className="type">{type}</div>
-                <div className="money">{money}</div>
+                <div className="money" style={isDetail ? {textAlign: "right",padding: 10} : {} }>{money}</div>
             </div>
         )
     }

@@ -21,7 +21,7 @@ export default class Icon extends React.PureComponent {
             share: 'icon-share', 
             redpacket: 'icon-redpacket', 
             game: 'icon-game', 
-            goods: 'icon-goods', 
+            shopping: 'icon-goods', 
             delete: 'icon-delete', 
             setting: 'icon-settings', 
             form: 'icon-form', 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './head.css'
 
-export default class Head extends Component {
+export default class Head1 extends Component {
     render() {
         // TODO 正则匹配提取类名
         // const icon = `.icno-weixin`
@@ -14,28 +14,8 @@ export default class Head extends Component {
                     <i className={`iconfont ${item}`}></i>{item}<br/></span>
                    )
                 }
-                    {/* <div className='row row1'>
-                        <i className='iconfont icon-tongji tongji' onClick={()=> alert('111')}></i>
-                        <i className="iconfont icon-rili rili"></i>
-                        <div className='jiating'>家庭</div>
-                        <i className='iconfont icon-more more'></i>
-                    </div>
-
-                    <div className='row row2'>
-                        <div className='total'>
-                            <span className='rest'>0</span><br/><span>1月结余</span>
-                        </div>
-                    </div>
-
-                    <div className='row row3'>
-                        <div className='left'>
-                            <span>0</span><br/><span>1月收入</span>
-                        </div>
-
-                        <div className='right'>
-                            <span>4037.4</span><br/><span>1月支出</span>
-                        </div>
-                    </div> */}
+                
+                <div style={{marginTop: 100,height: 30}} onClick={() => this.props.history.goBack()}>GO BACK</div>
             </div>
         )
     }

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Head from './component/Head';
 import Content from './component/Content';
 // import Head1 from './component/Head1';
 import Footer from './component/Footer';
 import './index.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // const AA = () => {
 //     return <div>
@@ -21,15 +21,18 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div className='home-container'>
-                <Head />
-                <Content />
-                <Footer />
-            </div>
+            <Fragment>
+                <div className='home-container'>
+                    <Head />
+                    <Content />
+                    <Footer />
+                </div>
+                <Link to='/example'>example</Link>
+            </Fragment>
+           
         );
     }
 }
-
 /**
  * 组件列表：
  * 下拉刷新
