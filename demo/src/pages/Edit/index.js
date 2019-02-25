@@ -23,7 +23,6 @@ export default class Edit extends Component {
             {icon:'house',text:'房租'},
             {icon: 'game',text: '娱乐'},
             {icon: 'jiaotong',text: '交通'},
-            {icon: 'redpacket',text: '红包'}
         ]
         return (
             <div className='edit'>
@@ -41,7 +40,17 @@ export default class Edit extends Component {
                 <Item money={money}/>
 
                 <div className='edit-icons'>
-
+                    <div className='edit-row'>
+                        {
+                            icons.map(item => {
+                                return (<div className='edit-icon-container' key={item.text}>
+                                    <div className='edit-icon'>
+                                        <Icon type={item.icon} />
+                                    </div>
+                                    <div className='edit-icon-text'>{item.text}</div></div>)
+                            })
+                        }
+                    </div>
                 </div>
                 <div className='calculate'>
                     {

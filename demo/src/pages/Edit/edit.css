@@ -4,7 +4,35 @@
     flex-direction: column;
     /* background-color: rebeccapurple; */
 }
-
+.edit-icons {
+    margin-top: 20px;
+    flex: 1;
+}
+.edit-row {
+   flex: 1;
+   display: flex;
+   flex-direction: row;
+  
+}
+.edit-icon-container {
+    flex: 1;
+    padding: 0 20px;
+}
+.edit-icon {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #eee;
+    text-align: center;
+}
+.edit-icon-text {
+    padding: 3px 0;
+    text-indent: 1em;
+}
+.edit-icon-active {
+    background-color: chocolate;
+}
 .edit-title {
     display: flex;
     height: 30px;
