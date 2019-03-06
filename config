@@ -1,8 +1,0 @@
-Host github.com
-	HostName github.com
-	User git
-	IdentityFile ~/.ssh/github
-Host 123.59.47.88
-	HostName gitlab.yonghuivip.com
-	User git
-	IdentityFile ~/.ssh/gitlab
