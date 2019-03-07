@@ -2,13 +2,14 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const mode = process.env.NODE_ENV === 'development' ?
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: {
         app: [path.resolve(__dirname, '../index'), `webpack-dev-server/client?http://0.0.0.0:3000`,
-        'webpack/hot/dev-server'],
+        'webpack/hot/dev-server']
     },
+    mode: 'development',
     output:{
         path: path.resolve(__dirname, '../dist'),
         filename: '[name].bundle.js',
@@ -34,6 +35,12 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
+
+        new webpack.DllReferencePlugin({
+                context: __dirname,
+                manifest: require('../dist/manifest.json'),
+        }),
+        new BundleAnalyzerPlugin(),
         new HtmlWebpackPlugin({
             template: path.join(__dirname,'../index.html'),
             title: 'node forum',
