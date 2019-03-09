@@ -26,12 +26,12 @@
         "webpack-dev-server": "^3.1.14"
     },
     "scripts": {
-        "build": "webpack --config build/webpack.config.js",
+        "build": "webpack --config webpack.config.js",
         "start": "nodemon build/server"
     },
     "dependencies": {
         "react": "^16.7.0",
         "react-dom": "^16.7.0",
-        "webpack": "^4.29.0"
+        "webpack": "^4.29.6"
     }
 }
