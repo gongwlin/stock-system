@@ -1,0 +1,45 @@
+
+.stock-product{
+    width: 100%;
+    padding-bottom: 10px; 
+
+    .title{
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    .img {
+        height: 60px;
+        width: 60px;
+        background: white;
+    }
+    .item-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-item{
+        background-color: white;
+        border-bottom: 1px solid #eee;
+    }
+    P {
+        margin-bottom: 2px;
+    }
+    .product-name{
+        color: black;
+        width:100%;
+        font-size: 18px;
+        text-align: center;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+    &-count{
+        color: red;
+        font-size: 20px;
+        text-align: center;
+    }
+}

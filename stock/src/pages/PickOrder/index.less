@@ -1,0 +1,50 @@
+.mobile-header {
+    width: 100vw;
+    height: 40px;
+    background: #108ee9;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    align-items: center;
+}
+
+.pickorder{
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 0  15px 20px 15px;
+    font-size: 20px;
+    flex: 1;
+    position: relative;
+    .orderid {
+        padding: 0 15px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .pickorder-title {
+        position: sticky;
+        // width: 100vw;
+        // top: 70px;
+        top: 0px;
+        z-index: 10;
+        flex: 1;
+        display: flex;
+        background: white;
+        align-items: center;
+        justify-content: space-between;
+       
+        & span {
+            height: 40px;
+            width: 90px;
+            font-size: 18px;
+            color: white;
+            background: #24A8E8;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.delivery-orderitem {
+    padding: 0 15px;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    .orderitemid {
+        font-size: 20px;
+
+        .hightlight {
+            color: red;
+            font-size: 24px;
+        }
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .customerinfo {
+        border-top: 1px solid #DDDDDD;
+        border-bottom: 1px solid #DDDDDD;
+        font-size: 20px;
+        .name {
+            color: #666666;
+        }
+        .address {
+            color: #333333;
+        }
+        
+    }
+
+    .buttons {
+        display: flex;
+        padding-bottom: 10px;
+        margin-top: 10px; 
+        justify-content: space-between;
+        .contact {
+            outline: none;
+            border-radius: 3px;
+            border: 1px solid #999999;
+            background: transparent;
+            color: #333333;
+        }
+        .deliveryDone {
+            outline: none;
+            padding: 5px 15px;
+            border: none;
+            border-radius: 3px;
+            background: #24A8E8;
+            color: white;
+        }
+    }
+}

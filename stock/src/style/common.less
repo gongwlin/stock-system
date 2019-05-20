@@ -1,0 +1,45 @@
+ul,li{
+    list-style: none;
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+.clearfix{
+    &::after{
+        content:' ';
+        clear:both;
+        display: block;
+        visibility: hidden;
+    }
+}
+.container{
+    height: 100%;
+
+    .nav-left{
+        background-color:#001529;
+        color: #ffffff;
+    }
+    .main{
+        background-color: white;
+        overflow: auto;
+    }
+    .content{
+        padding: 10px 15px 5px;
+    }
+}
+
+.content-wrap{
+    background: #f1f3f5;
+    border: 1px solid #e8e8e8;
+    margin-top: -3px;
+    .ant-table-wrapper{
+        margin-left: -1px;
+        margin-right: -2px;
+    }
+}
+.ant-card{
+    button{
+        margin-right: 10px;
+    }
+}
